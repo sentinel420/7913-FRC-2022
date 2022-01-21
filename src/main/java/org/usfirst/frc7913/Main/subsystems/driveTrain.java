@@ -49,6 +49,6 @@ public class driveTrain extends Subsystem {
     @Override
     public void periodic() {
         //Line that sets speed of motors
-        driveTrain.arcadeDrive(Robot.oi.joystickx30.getY(), Robot.oi.joystickx30.getX());
+        driveTrain.arcadeDrive(Robot.oi.joystickx30.getY(), Robot.oi.joystickx30.getX(), true);
     }
 }
