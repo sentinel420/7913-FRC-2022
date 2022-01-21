@@ -1,5 +1,4 @@
 name: FRC Build & Test
-uses: Ewpratten/FRC-actions@v1.1.2
 on: [push, pull_request]
 
 jobs:
