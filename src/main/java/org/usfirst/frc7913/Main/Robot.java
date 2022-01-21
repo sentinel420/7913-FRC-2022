@@ -20,7 +20,7 @@ public class Robot extends TimedRobot {
     SendableChooser<Command> chooser = new SendableChooser<>();
 
     public static OI oi;
-    public static driveTrain driveTrain;
+    public static DriveTrain DriveTrain;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -29,7 +29,7 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
 
-        driveTrain = new driveTrain();
+        DriveTrain = new DriveTrain();
         oi = new OI();
 
         chooser.setDefaultOption("Autonomous Command", new AutonomousCommand());

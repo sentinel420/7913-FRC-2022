@@ -28,7 +28,7 @@ public class OI {
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
-        SmartDashboard.putData("drive", new drive());
+        SmartDashboard.putData("Drive", new Drive());
 
     }
 

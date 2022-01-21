@@ -2,11 +2,11 @@ package org.usfirst.frc7913.Main.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc7913.Main.Robot;
 
-public class drive extends Command {
+public class Drive extends Command {
 
     
-    public drive() {
-        requires(Robot.driveTrain);
+    public Drive() {
+        requires(Robot.DriveTrain);
     }
 
     // Called just before this Command runs the first time

@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.motorcontrol.PWMVictorSPX;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 
-public class driveTrain extends Subsystem {
+public class DriveTrain extends Subsystem {
     private PWMVictorSPX leftLead;
     private PWMVictorSPX leftFollow;
     private MotorControllerGroup leftSide;
@@ -15,9 +15,9 @@ public class driveTrain extends Subsystem {
     private PWMVictorSPX rightFollow;
     private MotorControllerGroup rightSide;
 
-    private DifferentialDrive driveTrain;
+    private DifferentialDrive DriveTrain;
 
-    public driveTrain() {
+    public DriveTrain() {
         // Left motors looking from the back of the robot
         // Front-Left motor
         leftLead = new PWMVictorSPX(0);
@@ -45,27 +45,27 @@ public class driveTrain extends Subsystem {
         // Assigning right motors to the same controller group
         rightSide = new MotorControllerGroup(rightLead, rightFollow);
 
-        // Using differential drive which is similar to a tank or skid steer
-        // If using mechanum drive, this must be changed to creating a MecanumDrive
+        // Using differential Drive which is similar to a tank or skid steer
+        // If using mechanum Drive, this must be changed to creating a MecanumDrive
         // object instead
-        driveTrain = new DifferentialDrive(leftSide, rightSide);
+        DriveTrain = new DifferentialDrive(leftSide, rightSide);
 
-        // Drivetrain config
-        driveTrain.setSafetyEnabled(true);
-        driveTrain.setExpiration(0.1);
-        driveTrain.setMaxOutput(1.0);
+        // DriveTrain config
+        DriveTrain.setSafetyEnabled(true);
+        DriveTrain.setExpiration(0.1);
+        DriveTrain.setMaxOutput(1.0);
     }
 
     @Override
     public void initDefaultCommand() {
-        setDefaultCommand(new drive());
+        setDefaultCommand(new Drive());
     }
 
     @Override
     public void periodic() {
         // Gets X & Y axes from the joystick controller
-        // Arcade drive combines the two motor controller groups, first arg is forward/reverse, second is rotation.
-        // Unlike tank drive which has the two motor controller groups separate where the first arg is forward/reverse for the left side and the second is the same for the right
-        driveTrain.arcadeDrive(Robot.oi.joystickx30.getY(), Robot.oi.joystickx30.getX(), true);
+        // Arcade Drive combines the two motor controller groups, first arg is forward/reverse, second is rotation.
+        // Unlike tank Drive which has the two motor controller groups separate where the first arg is forward/reverse for the left side and the second is the same for the right
+        DriveTrain.arcadeDrive(Robot.oi.joystickx30.getY(), Robot.oi.joystickx30.getX(), true);
     }
 }
