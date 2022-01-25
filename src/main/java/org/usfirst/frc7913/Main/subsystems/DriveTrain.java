@@ -20,25 +20,25 @@ public class DriveTrain extends Subsystem {
     public DriveTrain() {
         // Left motors looking from the back of the robot
         // Front-Left motor
-        leftLead = new PWMVictorSPX(0);
+        leftLead = new PWMVictorSPX(1);
         addChild("leftLead", leftLead);
-        leftLead.setInverted(false);
+        leftLead.setInverted(true);
         // Rear-Left motor
-        leftFollow = new PWMVictorSPX(2);
+        leftFollow = new PWMVictorSPX(0);
         addChild("leftFollow", leftFollow);
-        leftFollow.setInverted(false);
+        leftFollow.setInverted(true);
 
         // Assigning left motors to the same controller group
         leftSide = new MotorControllerGroup(leftLead, leftFollow);
 
         // Right motors looking from the back of the robot
         // Front-Right motor
-        rightLead = new PWMVictorSPX(1);
+        rightLead = new PWMVictorSPX(3);
         addChild("rightLead", rightLead);
         rightLead.setInverted(false);
 
         // Rear-Right motor
-        rightFollow = new PWMVictorSPX(3);
+        rightFollow = new PWMVictorSPX(2);
         addChild("rightFollow", rightFollow);
         rightFollow.setInverted(false);
 
