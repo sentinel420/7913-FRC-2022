@@ -66,6 +66,6 @@ public class DriveTrain extends Subsystem {
         // Gets X & Y axes from the joystick controller
         // Arcade Drive combines the two motor controller groups, first arg is forward/reverse, second is rotation.
         // Unlike tank Drive which has the two motor controller groups separate where the first arg is forward/reverse for the left side and the second is the same for the right
-        DriveTrain.arcadeDrive(Robot.oi.joystickx30.getY(), Robot.oi.joystickx30.getX(), true);
+        DriveTrain.arcadeDrive(Robot.io.joystickx30.getY(), Robot.io.joystickx30.getX(), true);
     }
 }

@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.buttons.*;
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
-public class OI {
+public class IO {
 
     public JoystickButton button1;
     public JoystickButton button2;
@@ -22,7 +22,7 @@ public class OI {
     public Joystick xboxController;
     boolean status = true;
 
-    public OI() {
+    public IO() {
         xboxController = new Joystick(1);
         joystickx30 = new Joystick(0); 
 

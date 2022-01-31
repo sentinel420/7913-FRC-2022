@@ -19,7 +19,7 @@ public class Robot extends TimedRobot {
     Command autonomousCommand;
     SendableChooser<Command> chooser = new SendableChooser<>();
 
-    public static OI oi;
+    public static IO io;
     public static DriveTrain DriveTrain;
 
     /**
@@ -30,7 +30,7 @@ public class Robot extends TimedRobot {
     public void robotInit() {
 
         DriveTrain = new DriveTrain();
-        oi = new OI();
+        io = new IO();
 
         chooser.setDefaultOption("Autonomous Command", new AutonomousCommand());
 
